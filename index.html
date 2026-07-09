@@ -1,1 +1,797 @@
-Privacy
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="[YOUR_PRIVACY_POLICY_URL]">
+  <title>Privacy Policy — HoppiBee</title>
+  <style>
+    /* ── Design Tokens ──────────────────────────────────────────────────── */
+    :root {
+      --color-primary: #F9A825;
+      --color-primary-dark: #F57F17;
+      --color-bg: #FAFAFA;
+      --color-surface: #FFFFFF;
+      --color-text: #212121;
+      --color-text-secondary: #616161;
+      --color-heading: #1A237E;
+      --color-link: #1565C0;
+      --color-link-visited: #4527A0;
+      --color-draft-bg: #1A237E;
+      --color-draft-text: #ffffff;
+      --color-border: #E0E0E0;
+      --color-toc-bg: #FFF8E1;
+      --color-toc-border: #F9A825;
+      --radius: 8px;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
+    }
+
+    /* ── Reset ──────────────────────────────────────────────────────────── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ── Base ───────────────────────────────────────────────────────────── */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--color-text);
+      background: var(--color-bg);
+    }
+
+    /* ── Layout ─────────────────────────────────────────────────────────── */
+    .page-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 16px 64px;
+    }
+
+    /* ── Draft Banner ───────────────────────────────────────────────────── */
+    .draft-banner {
+      background: var(--color-draft-bg);
+      color: var(--color-draft-text);
+      text-align: center;
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .draft-banner strong {
+      font-size: 15px;
+    }
+
+    /* ── Page Header ────────────────────────────────────────────────────── */
+    .page-header {
+      background: var(--color-surface);
+      border-bottom: 4px solid var(--color-primary);
+      padding: 32px 0 24px;
+      margin-bottom: 32px;
+    }
+
+    .page-header .app-name {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-primary-dark);
+      margin-bottom: 6px;
+    }
+
+    .page-header h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--color-heading);
+      margin-bottom: 10px;
+    }
+
+    .page-header .last-updated {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+    }
+
+    .page-header .legal-note {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      font-style: italic;
+    }
+
+    /* ── Table of Contents ──────────────────────────────────────────────── */
+    .toc {
+      background: var(--color-toc-bg);
+      border-left: 4px solid var(--color-toc-border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 36px;
+    }
+
+    .toc h2 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-secondary);
+      margin-bottom: 12px;
+      border: none;
+      padding: 0;
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 20px;
+      columns: 1;
+    }
+
+    .toc li {
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .toc a {
+      color: var(--color-link);
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Sections ───────────────────────────────────────────────────────── */
+    section {
+      background: var(--color-surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px 28px 24px;
+      margin-bottom: 20px;
+      scroll-margin-top: 16px;
+    }
+
+    section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-heading);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--color-border);
+    }
+
+    section p {
+      margin-bottom: 12px;
+      color: var(--color-text);
+    }
+
+    section p:last-child {
+      margin-bottom: 0;
+    }
+
+    section ul,
+    section ol {
+      margin: 8px 0 12px 20px;
+      color: var(--color-text);
+    }
+
+    section li {
+      margin-bottom: 6px;
+    }
+
+    /* ── Description List (§2) ──────────────────────────────────────────── */
+    dl {
+      margin: 8px 0;
+    }
+
+    dt {
+      font-weight: 600;
+      color: var(--color-heading);
+      margin-top: 14px;
+    }
+
+    dt:first-child {
+      margin-top: 0;
+    }
+
+    dd {
+      margin-left: 16px;
+      color: var(--color-text);
+      margin-bottom: 4px;
+    }
+
+    /* ── Third-Party Services Table (§5) ───────────────────────────────── */
+    .services-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    .services-table th {
+      background: var(--color-heading);
+      color: #FFFFFF;
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+    }
+
+    .services-table th:first-child {
+      border-radius: 6px 0 0 0;
+    }
+
+    .services-table th:last-child {
+      border-radius: 0 6px 0 0;
+    }
+
+    .services-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--color-border);
+      vertical-align: top;
+    }
+
+    .services-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .services-table tr:nth-child(even) td {
+      background: #F5F5F5;
+    }
+
+    /* ── Links ──────────────────────────────────────────────────────────── */
+    a {
+      color: var(--color-link);
+    }
+
+    a:visited {
+      color: var(--color-link-visited);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Callout box (children's privacy notice) ────────────────────────── */
+    .callout {
+      background: #E8F5E9;
+      border-left: 4px solid #388E3C;
+      border-radius: 4px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 14px;
+      color: #1B5E20;
+    }
+
+    .callout strong {
+      color: #1B5E20;
+    }
+
+    /* ── Placeholder styling ─────────────────────────────────────────────── */
+    .placeholder {
+      background: #FFF9C4;
+      border: 1px dashed #F9A825;
+      border-radius: 3px;
+      padding: 1px 5px;
+      font-family: monospace;
+      font-size: 13px;
+      color: #E65100;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    /* ── Responsive ─────────────────────────────────────────────────────── */
+    @media (min-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+
+      .page-wrapper {
+        padding: 0 32px 80px;
+      }
+
+      .page-header h1 {
+        font-size: 32px;
+      }
+
+      .toc ol {
+        columns: 2;
+        column-gap: 24px;
+      }
+
+      section {
+        padding: 32px 36px 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="draft-banner">
+    <strong class="app-name"> HoppiBee</strong>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last Updated: <span class="placeholder">09-July-2026</span></p>
+    </header>
+
+    <!-- Table of Contents -->
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#section-1">1. Who We Are &amp; Scope</a></li>
+        <li><a href="#section-2">2. Data We Collect</a></li>
+        <li><a href="#section-3">3. Children's Privacy</a></li>
+        <li><a href="#section-4">4. How We Use Your Data</a></li>
+        <li><a href="#section-5">5. Third-Party Services</a></li>
+        <li><a href="#section-6">6. Data Storage &amp; Security</a></li>
+        <li><a href="#section-7">7. Your Rights &amp; Data Deletion</a></li>
+        <li><a href="#section-8">8. Data Retention</a></li>
+        <li><a href="#section-9">9. International Data Transfers</a></li>
+        <li><a href="#section-10">10. Changes to This Policy</a></li>
+        <li><a href="#section-11">11. Contact Us</a></li>
+      </ol>
+    </nav>
+
+    <main>
+
+      <!-- §1 Who We Are & Scope -->
+      <section id="section-1">
+        <h2>1. Who We Are &amp; Scope</h2>
+        <p>
+          HoppiBee is a multilingual language learning platform designed for users of all ages —
+          from toddlers to adults. Our mission is to make language learning engaging, effective,
+          and accessible to everyone.
+        </p>
+        <p>
+          This Privacy Policy applies to the HoppiBee mobile application available on iOS and
+          Android, and to any companion web presence operated by HoppiBee. It describes how we
+          collect, use, and protect information in connection with your use of our services.
+        </p>
+        <p>
+          By using HoppiBee, you agree to the practices described in this policy. If you do not
+          agree, please do not use the app. The "Last Updated" date at the top of this page
+          reflects the most recent revision.
+        </p>
+      </section>
+
+      <!-- §2 Data We Collect -->
+      <section id="section-2">
+        <h2>2. Data We Collect</h2>
+        <p>
+          We collect only the information necessary to provide, improve, and personalise the
+          HoppiBee learning experience. The categories below describe what we collect and why.
+        </p>
+        <dl>
+          <dt>(a) Account Data — Registered Users</dt>
+          <dd>
+            When you create a HoppiBee account, we collect your email address and an
+            authentication identifier via Firebase Authentication. This is used solely to identify
+            your account and secure access to your saved progress.
+          </dd>
+
+          <dt>(b) Anonymous Session Identifier — Guest Users</dt>
+          <dd>
+            If you choose to use HoppiBee as a guest (without registering), we assign an anonymous
+            session identifier via Firebase Authentication's anonymous sign-in feature. No name,
+            email address, age, or any personal detail is required or collected. Guest usage
+            requires zero personal information.
+          </dd>
+
+          <dt>(c) Learning Progress Data</dt>
+          <dd>
+            We store your selected learning language, completed lessons, quiz scores, XP points,
+            streak count, earned badges, and identified strengths and weaknesses. This data is
+            always saved on your device. For registered users it is additionally synced to Firebase
+            Cloud Firestore so your progress is available across devices.
+          </dd>
+
+          <dt>(d) Crash &amp; Performance Diagnostics</dt>
+          <dd>
+            We use Firebase Crashlytics to automatically collect crash reports and performance
+            data when the app encounters an error. This data helps us identify and fix bugs. It
+            does not contain personally identifiable information.
+          </dd>
+
+          <dt>(e) Usage Analytics</dt>
+          <dd>
+            We use Firebase Analytics to collect aggregate, anonymised data about how users
+            interact with the app — such as which lessons are started or completed, quiz
+            performance trends, and language selection patterns. We do not collect verbatim
+            event logs tied to individual identities.
+          </dd>
+
+          <dt>(f) Advertising Data</dt>
+          <dd>
+            HoppiBee displays ads via Google AdMob. AdMob is configured with
+            <strong>child-directed treatment for all users</strong> — meaning only contextual,
+            non-personalised ads are served. No interest-based or behavioural advertising
+            identifiers are used. This applies to both guest and registered users.
+          </dd>
+
+          <dt>(g) Push Notification Tokens</dt>
+          <dd>
+            If you enable push notifications, we collect a device notification token via Firebase
+            Cloud Messaging. This token is used only to send you learning reminders and app
+            updates. You can disable notifications at any time through your device settings.
+          </dd>
+        </dl>
+      </section>
+
+      <!-- §3 Children's Privacy -->
+      <section id="section-3">
+        <h2>3. Children's Privacy</h2>
+        <p>
+          HoppiBee is designed for users of all ages, including young children, and contains
+          no violent, harmful, or age-inappropriate content. We take children's privacy seriously
+          and have built the app with data minimisation as a core principle.
+        </p>
+        <div class="callout">
+          <strong>Guest Mode — Zero Personal Data:</strong> Any user — regardless of age — can
+          use HoppiBee in guest mode without providing any personal information whatsoever.
+          Guest mode collects only an anonymous session identifier. No name, email, age, or
+          any other personal detail is required or stored.
+        </div>
+        <p>
+          <strong>Children Under 13 (COPPA):</strong> The Children's Online Privacy Protection
+          Act (COPPA) requires verifiable parental consent before collecting personal information
+          from children under 13 in the United States. A formal COPPA-compliant verifiable
+          parental consent flow is not yet present in the current version of HoppiBee and is
+          planned for a future release.
+        </p>
+        <p>
+          In the interim, we recommend the following:
+        </p>
+        <ul>
+          <li>
+            Children under 13 should use HoppiBee in <strong>guest mode</strong>, which requires
+            no personal information and keeps all data on the device.
+          </li>
+          <li>
+            If a parent or guardian wishes to create a registered account that syncs progress to
+            the cloud, they should create the account themselves using their own email address and
+            supervise the child's use of the app.
+          </li>
+          <li>
+            Parental supervision is recommended for all children using any digital application,
+            including HoppiBee.
+          </li>
+        </ul>
+        <p>
+          If you believe we have inadvertently collected personal information from a child under
+          13 without appropriate consent, please contact us immediately at
+          <span class="placeholder">hoppiebeeadmin@gmail.com</span> and we will promptly delete
+          the information.
+        </p>
+      </section>
+
+      <!-- §4 How We Use Your Data -->
+      <section id="section-4">
+        <h2>4. How We Use Your Data</h2>
+        <p>We use the information we collect for the following purposes:</p>
+        <ul>
+          <li>
+            <strong>Deliver and personalise learning content</strong> — to present lessons,
+            quizzes, and exercises appropriate to your selected language, progress level, and
+            identified strengths and weaknesses.
+          </li>
+          <li>
+            <strong>Save and sync your progress</strong> — to store completed lessons, quiz
+            scores, XP, streaks, and badges on your device, and (for registered users) to sync
+            this progress to the cloud so it is available across multiple devices.
+          </li>
+          <li>
+            <strong>Improve the app</strong> — to identify and fix crashes via diagnostic data,
+            and to understand aggregate usage patterns via anonymised analytics so we can make
+            HoppiBee better for all users.
+          </li>
+          <li>
+            <strong>Serve contextual ads</strong> — to display relevant, non-personalised
+            advertisements via Google AdMob. All ads use child-directed treatment; no
+            interest-based targeting is applied to any user.
+          </li>
+          <li>
+            <strong>Send push notifications</strong> — to send learning reminders, streak alerts,
+            and app update notices, but only when you have enabled notifications on your device.
+            You can opt out at any time via your device settings.
+          </li>
+        </ul>
+        <p>
+          We do not sell your personal information to third parties. We do not use your data for
+          purposes beyond those listed above.
+        </p>
+      </section>
+
+      <!-- §5 Third-Party Services -->
+      <section id="section-5">
+        <h2>5. Third-Party Services</h2>
+        <p>
+          HoppiBee uses the following third-party services operated by Google LLC and its
+          subsidiaries. Each service processes data on our behalf as described below. For full
+          details, see
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+            Google's Privacy Policy</a> and
+          <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">
+            Firebase's Privacy and Security documentation</a>.
+        </p>
+        <table class="services-table" aria-label="Third-party services used by HoppiBee">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Role in HoppiBee</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">
+                  Firebase Authentication
+                </a>
+              </td>
+              <td>Manages user sign-in (email/password, Google Sign-In, and anonymous guest sessions) and secures access
+                to account data.</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">
+                  Cloud Firestore
+                </a>
+              </td>
+              <td>Stores and syncs registered users' learning progress, profile data, and lesson history across devices.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">
+                  Firebase Storage
+                </a>
+              </td>
+              <td>Hosts curriculum content assets (audio pronunciations, images) served to all users as read-only
+                content.</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">
+                  Firebase Cloud Messaging
+                </a>
+              </td>
+              <td>Delivers push notifications (learning reminders, streak alerts) to users who have enabled
+                notifications on their device.</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">
+                  Firebase Analytics
+                </a>
+              </td>
+              <td>Collects aggregate, anonymised usage data (lesson starts, quiz completions, language selections) to
+                help us improve the app experience.</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">
+                  Firebase Crashlytics
+                </a>
+              </td>
+              <td>Captures automatic crash reports and performance diagnostics to help us identify and resolve bugs
+                quickly.</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">
+                  Firebase Remote Config
+                </a>
+              </td>
+              <td>Delivers app configuration and feature flags remotely without an app update; does not collect or
+                transmit personal data.</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+                  Google AdMob
+                </a>
+              </td>
+              <td>Displays contextual (non-personalised) advertisements; configured with child-directed treatment for
+                all users — no interest-based or behavioural targeting.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- §6 Data Storage & Security -->
+      <section id="section-6">
+        <h2>6. Data Storage &amp; Security</h2>
+        <p>
+          <strong>On-device storage:</strong> All users — including guests — have their learning
+          progress saved locally on their device using the device's secure local storage
+          capabilities. This data is available immediately without an internet connection.
+        </p>
+        <p>
+          <strong>Cloud storage (registered users only):</strong> When you create a registered
+          account, your progress is additionally stored in Firebase Cloud Firestore and your
+          profile assets may be stored in Firebase Storage. This enables progress to be synced
+          across multiple devices.
+        </p>
+        <p>
+          <strong>Security practices:</strong> We apply industry-standard security practices to
+          protect your data, including:
+        </p>
+        <ul>
+          <li>Encryption in transit — all communication between the app and Firebase services
+            uses TLS/HTTPS.</li>
+          <li>Encryption at rest — Firebase encrypts data stored on its servers.</li>
+          <li>Firestore security rules — each registered user's progress data in Firestore is
+            protected by security rules that permit access only by the authenticated user
+            who owns that data. No other user, and no unauthenticated request, can read or
+            write your progress documents.</li>
+          <li>Authentication — all registered-user data operations require a valid Firebase
+            Authentication session tied to your account.</li>
+        </ul>
+        <p>
+          While we take reasonable precautions to protect your information, no method of
+          transmission or storage is 100% secure. We encourage you to use a strong, unique
+          password for your account.
+        </p>
+      </section>
+
+      <!-- §7 Your Rights & Data Deletion -->
+      <section id="section-7">
+        <h2>7. Your Rights &amp; Data Deletion</h2>
+        <p>
+          You have the right to access, correct, or delete the personal information associated
+          with your use of HoppiBee.
+        </p>
+        <p><strong>Guest Users</strong></p>
+        <p>
+          All data for guest sessions exists only on your device. To permanently remove it,
+          uninstall the HoppiBee app or clear the app's data through your device's Settings.
+          No action is required from us — there is no cloud-stored data to delete for guest
+          accounts.
+        </p>
+        <p><strong>Registered Users</strong></p>
+        <p>
+          To delete your registered account and all associated data, use the
+          <strong>in-app deletion flow</strong>:
+        </p>
+        <ol>
+          <li>Open HoppiBee and navigate to your <strong>Profile</strong>.</li>
+          <li>Tap <strong>Delete Account</strong>.</li>
+          <li>Confirm your identity by re-authenticating with your password or Google account.</li>
+          <li>Confirm the deletion. Your Firebase Authentication account and all associated
+            Firestore data (profile, progress, quiz scores, badges) will be permanently
+            deleted.</li>
+        </ol>
+        <p>
+          You may also submit a data access or deletion request by contacting us at
+          <a href="mailto:[hoppiebeeadmin@gmail.com]"><span class="placeholder">hoppiebeeadmin@gmail.com</span></a>.
+          We will respond within 30 days.
+        </p>
+      </section>
+
+      <!-- §8 Data Retention -->
+      <section id="section-8">
+        <h2>8. Data Retention</h2>
+        <p>
+          <strong>Active accounts:</strong> We retain your account and learning progress data
+          for as long as your account remains active. You can review and update your information
+          at any time through the app's Profile section.
+        </p>
+        <p>
+          <strong>After account deletion:</strong> When you delete your account (via the
+          in-app flow described in Section-7), all personal data stored in Firebase Cloud Firestore —
+          including your profile, learning progress, quiz scores, streaks, and badges — is
+          permanently purged within <strong>30 days</strong> of the deletion request.
+        </p>
+        <p>
+          <strong>Analytics data:</strong> Anonymised or aggregated analytics data collected via
+          Firebase Analytics — which cannot be linked back to any individual user — may be
+          retained beyond the 30-day window for product improvement purposes.
+        </p>
+        <p>
+          <strong>Guest data:</strong> Data stored on-device for guest sessions is removed
+          immediately when the app is uninstalled or when the app's data is cleared through
+          device settings. No cloud deletion is necessary.
+        </p>
+      </section>
+
+      <!-- §9 International Data Transfers -->
+      <section id="section-9">
+        <h2>9. International Data Transfers</h2>
+        <p>
+          HoppiBee uses Firebase and Google services, which are operated by Google LLC, a company
+          headquartered in the United States. When you use HoppiBee, your data may be processed
+          and stored on servers located in the United States or other countries outside your
+          country of residence.
+        </p>
+        <p>
+          Google LLC operates a global infrastructure and applies appropriate safeguards for
+          international data transfers in accordance with applicable data protection laws,
+          including Standard Contractual Clauses where required under the laws of the European
+          Economic Area, United Kingdom, or Switzerland.
+        </p>
+        <p>
+          By using HoppiBee, you acknowledge and consent to this transfer, storage, and
+          processing of your information in countries outside your own. For more information
+          about how Google protects data in international transfers, please review
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+            Google's Privacy Policy</a>.
+        </p>
+      </section>
+
+      <!-- §10 Changes to This Policy -->
+      <section id="section-10">
+        <h2>10. Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time as the app evolves or as laws and
+          regulations change. When we do, the <strong>"Last Updated"</strong> date at the top of
+          this page will be revised to reflect the date of the most recent change.
+        </p>
+        <p>
+          For significant changes that materially affect how we handle your data, we will also
+          include a notice in the app's release notes published on the Apple App Store and
+          Google Play Store at the time of the update.
+        </p>
+        <p>
+          We encourage you to review this policy periodically so you remain informed about how
+          we are protecting your information. Your continued use of HoppiBee after any changes
+          are posted constitutes your acceptance of the revised Privacy Policy.
+        </p>
+      </section>
+
+      <!-- §11 Contact Us -->
+      <section id="section-11">
+        <h2>11. Contact Us</h2>
+        <p>
+          If you have any questions, concerns, or requests regarding this Privacy Policy or the
+          way we handle your personal data — including requests to access, correct, or delete
+          your data — please contact us:
+        </p>
+        <p>
+          <strong>Developer:</strong>
+          <span class="placeholder">Manoj Kumar R</span>
+        </p>
+        <p>
+          <strong>Privacy Contact Email:</strong>
+          <a href="mailto:hoppiebeeadmin@gmail.com">
+            <span class="placeholder">hoppiebeeadmin@gmail.com</span>
+          </a>
+        </p>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>©2026. All rights reserved.</p>
+      <p style="margin-top:6px;">
+        HoppiBee Privacy Policy · Last Updated: <span class="placeholder">09-July-2026</span>
+      </p>
+    </footer>
+  </div><!-- /.page-wrapper -->
+</body>
+
+</html>
